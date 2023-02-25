@@ -8,23 +8,21 @@
 
 const formBtnEl = document.querySelector(".login-form");
 
-const handleSubmit = (event) => {
+const handleSubmit = event => {
     event.preventDefault();
     const {
     elements: { email, password }
     } = event.currentTarget;
     
 if (email.value === "" || password.value === "") {
-return alert("Вы ничего не ввели. Введите даные и можете загадать желание :)");
+return alert("Fill in all fields!");
 }
-    const objForm = {
+    const userInfo = {
         email: email.value,
         password: password.value,
    } 
-    console.log(objForm);
-         
+    console.log(userInfo);
     event.currentTarget.reset();
-    
 }
 
 formBtnEl.addEventListener("submit", handleSubmit);

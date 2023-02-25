@@ -3,18 +3,17 @@
 // Для генерування випадкового кольору використовуй функцію getRandomHexColor.
 
 
-
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const bodyElement = document.body;
-const buttonElement = document.querySelector('.change-color');
-const colorElement = document.querySelector('.color');
+const changeButton = document.querySelector('button.change-color')
+const body = document.querySelector('body')
+const colorValue = document.querySelector('span.color')
 
-buttonElement.addEventListener('click', () => {
-  bodyElement.style.backgroundColor = getRandomHexColor();
-  colorElement.textContent = bodyElement.style.backgroundColor;
-});
+
+changeButton.addEventListener('click', () => {
+  let color = getRandomHexColor();
+  body.style.backgroundColor = color;
+  colorValue.textContent = color;
+})

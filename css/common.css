@@ -19,6 +19,7 @@ input {
   color: #e255d2;
   border-radius: 10px;
 }
+
 button {
   background-color: #e255d2;
   border-radius: 5px;
@@ -28,14 +29,12 @@ button {
   padding: 10px 15px;
   cursor: pointer; 
 }
+
 .gallery {
   list-style: none;
   display: flex;
 }
 
-.js-item {
-  margin-right: 40px;
-}
 
 .js-image {
   height: 100%;
@@ -44,4 +43,7 @@ button {
   border-radius: 5px;
 }
 
+.js-item {
+  margin-right: 40px;
+}
 
